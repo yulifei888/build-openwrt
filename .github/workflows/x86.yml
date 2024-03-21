@@ -66,7 +66,7 @@ jobs:
         run: |
           # Set up compilation source code
           if [[ "${{ inputs.source_branch }}" == *"openwrt"* ]]; then
-              REPO_URL="https://github.com/openwrt/openwrt"
+              REPO_URL="https://github.com/coolsnowwolf/openwrt"
               REPO_BRANCH="main"
               TAGS_NAME="official"
           elif [[ "${{ inputs.source_branch }}" == *"lede"* ]]; then
@@ -105,11 +105,11 @@ jobs:
 
       - name: Update feeds
         run: cd openwrt/ && ./scripts/feeds update -a
+ 
+#      - name: Install feeds
+         run: cd openwrt/ && ./scripts/feeds install -a
 
-      - name: Install feeds
-        run: cd openwrt/ && ./scripts/feeds install -a
-
-      - name: upade go
+#     - name: upade go
         run: cd openwrt/ && rm -rf feeds/packages/lang/golang
 
       - name: upade golong
