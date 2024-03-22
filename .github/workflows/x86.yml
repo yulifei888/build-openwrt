@@ -32,7 +32,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     if: ${{ github.event.repository.owner.id }} == ${{ github.event.sender.id }}
 
     steps:
@@ -108,12 +108,13 @@ jobs:
  
       - name: Install feeds 
         run: cd openwrt/ && ./scripts/feeds install -a
-      
-
-#      - name: upade go run: cd openwrt/ && rm -rf feeds/packages/lang/golang
-
-#      - name: upade golong  run: cd openwrt/ && git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang 
-
+ 
+      - name: upade go
+        run: cd openwrt/ && rm -rf feeds/packages/lang/golang
+  
+      - name: upade golong
+         run: cd openwrt/ && git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
+         
       - name: Load custom configuration
         run: |
           [[ -d "files" ]] && mv -f files openwrt/files
