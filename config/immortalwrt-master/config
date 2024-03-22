@@ -4957,8 +4957,8 @@ CONFIG_PACKAGE_luci-app-upnp=y
 # CONFIG_PACKAGE_luci-theme-argon-light-mod is not set
 CONFIG_PACKAGE_luci-theme-argon-mc=y
 CONFIG_PACKAGE_luci-theme-argon-mod=y
-CONFIG_PACKAGE_luci-theme-argon-new=y
-CONFIG_PACKAGE_luci-theme-argonv2=y
+# CONFIG_PACKAGE_luci-theme-argon-new is not set
+# CONFIG_PACKAGE_luci-theme-argonv2 is not set
 # CONFIG_PACKAGE_luci-theme-argonv3 is not set
 # CONFIG_PACKAGE_luci-theme-atmaterial is not set
 CONFIG_PACKAGE_luci-theme-bootstrap=y
