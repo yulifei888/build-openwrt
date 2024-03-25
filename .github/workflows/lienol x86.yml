@@ -3,7 +3,7 @@
 # Description: Build OpenWrt
 #============================================================================================
 
-name: x86
+name: lienol x86
 
 on:
   repository_dispatch:
