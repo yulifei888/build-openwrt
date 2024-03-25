@@ -11,6 +11,10 @@
 sed -i '1i src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 sed -i '2i src-git small https://github.com/kenzok8/small' feeds.conf.default
 
+# selet love kenel
+sed -i '13d' /openwrt/target/linux/x86/Makefile
+sed -i '13i KERNEL_PATCHVER:=5.4' /openwrt/target/linux/x86/Makefile
+
 # other
 # rm -rf package/lean/{samba4,luci-app-samba4,luci-app-ttyd}
 
