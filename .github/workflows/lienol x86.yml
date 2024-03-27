@@ -109,14 +109,9 @@ jobs:
       - name: Install feeds 
         run: cd openwrt/ && ./scripts/feeds install -a
 
-      - name: upade go
-        run: cd openwrt/ && rm -rf feeds/packages/lang/golang
-  
-      - name: upade golong
-        run: cd openwrt/ && git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang
-
       - name: upade gn
         run: cd openwrt/ && make {toolchain,target,package/gn}/compile V=s -j8
+
       - name: Load custom configuration
         run: |
           [[ -d "files" ]] && mv -f files openwrt/files
