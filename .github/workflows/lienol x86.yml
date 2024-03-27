@@ -110,7 +110,7 @@ jobs:
         run: cd openwrt/ && ./scripts/feeds install -a
 
       - name: upade gn
-        run: cd openwrt/ && make {toolchain,target,package/gn}/compile V=s -j8
+        run: cd openwrt/ && rm -rf feeds/packages/lang/golang && git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang && make {toolchain,target,package/gn}/compile V=s -j8 
 
       - name: Load custom configuration
         run: |
