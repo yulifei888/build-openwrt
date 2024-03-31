@@ -182,13 +182,7 @@ jobs:
           body_path: release.txt
           files: ${{ env.FIRMWARE }}/*
 
-      - name: Delete workflow runs
-        uses: GitRML/delete-workflow-runs@main
-        with:
-          retain_days: 1
-          keep_minimum_runs: 3
-          token: ${{ secrets.GH_TOKEN }}
-          body: |
+
 
             ### OpenWrt Image information
             - Default IP: 192.168.1.1
