@@ -82,7 +82,7 @@ jobs:
               TAGS_NAME="openwrt"
           elif [[ "${{ inputs.source_branch }}" == *"lede"* ]]; then
               REPO_URL="https://github.com/coolsnowwolf/lede"
-              REPO_BRANCH="master"
+              REPO_BRANCH="20200915"
               TAGS_NAME="20200915"
           else
               echo "Unknown source code repository."
