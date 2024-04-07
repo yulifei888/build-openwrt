@@ -2,6 +2,10 @@
 # https://github.com/ophub/amlogic-s9xxx-openwrt
 # Description: Build OpenWrt
 #============================================================================================
+on:
+  #自动编译：每天早上4点
+   schedule:
+   - cron: 0 20 * * *
 
 name: R2100
 
