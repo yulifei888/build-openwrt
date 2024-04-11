@@ -15,10 +15,7 @@ on:
         default: "lede-master"
         type: choice
         options:
-          - openwrt-main
           - lede-master
-          - immortalwrt-master
-          - Lienol-master
       
 env:
   FEEDS_CONF: config/${{ inputs.source_branch }}/feeds.conf.default
@@ -73,14 +70,6 @@ jobs:
               REPO_URL="https://github.com/coolsnowwolf/lede"
               REPO_BRANCH="master"
               TAGS_NAME="lede"
-          elif [[ "${{ inputs.source_branch }}" == *"immortalwrt"* ]]; then
-              REPO_URL="https://github.com/padavanonly/immortalwrt"
-              REPO_BRANCH="master"
-              TAGS_NAME="immortalwrt"
-          elif [[ "${{ inputs.source_branch }}" == *"Lienol"* ]]; then
-              REPO_URL="https://github.com/Lienol/openwrt"
-              REPO_BRANCH="22.03"
-              TAGS_NAME="Lienol"
           else
               echo "Unknown source code repository."
               exit 1
