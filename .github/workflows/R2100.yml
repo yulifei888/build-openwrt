@@ -6,9 +6,6 @@
 name: R2100
 
 on:
-  #自动编译：每天早上4点
-   schedule:
-   - cron: 0 20 * * *
    repository_dispatch:
    workflow_dispatch:
     inputs:
