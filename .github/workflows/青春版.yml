@@ -3,7 +3,7 @@
 # Description: Build OpenWrt
 #============================================================================================
 
-name: R2100
+name: R1CL
 
 on:
    repository_dispatch:
