@@ -22,7 +22,7 @@ on:
       
 env:
   FEEDS_CONF: config/${{ inputs.source_branch }}/feeds.conf.default
-  CONFIG_FILE: config/${{ inputs.source_branch }}/7981.config
+  CONFIG_FILE: config/${{ inputs.source_branch }}/q30.config
   DIY_P1_SH: config/${{ inputs.source_branch }}/diy-part1.sh
   DIY_P2_SH: config/${{ inputs.source_branch }}/diy-part2.sh
   UPLOAD_BIN_DIR: true
@@ -109,11 +109,6 @@ jobs:
       - name: Install feeds
         run: cd openwrt/ && ./scripts/feeds install -a
 
-      - name: upade go
-        run: cd openwrt/ && rm -rf feeds/packages/lang/golang
-  
-      - name: upade golong
-        run: cd openwrt/ && git clone https://github.com/sbwml/packages_lang_golang -b 22.x feeds/packages/lang/golang        
 
       - name: Load custom configuration
         run: |
