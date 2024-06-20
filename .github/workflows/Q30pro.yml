@@ -3,7 +3,7 @@
 # Description: Build OpenWrt
 #============================================================================================
 
-name: 7981
+name: JCG Q30 Pro闭源驱动OpenWrt
 
 on:
   repository_dispatch:
